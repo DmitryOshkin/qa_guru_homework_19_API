@@ -80,6 +80,7 @@ public class DemoWebShopTests extends TestBase {
         step("Add some gifts on wishlist", () -> {
             for (int i = 0; i < giftQuantity; i++) {
                 given()
+                        //.filter(new AllureRestAssured())
                         .contentType("application/x-www-form-urlencoded; charset=UTF-8")
                         .cookie(nopCustomer)
                         .cookie(nopCommerce)

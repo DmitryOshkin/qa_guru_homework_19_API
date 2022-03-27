@@ -22,6 +22,7 @@ public class TestBase {
 
         RestAssured.baseURI = App.config.apiUrl();
         Configuration.baseUrl = App.config.webUrl();
+        //RestAssured.filters(new AllureRestAssured());
         RestAssured.filters(withCustomTemplates());
 
         Configuration.browser = System.getProperty("browser", "chrome");
