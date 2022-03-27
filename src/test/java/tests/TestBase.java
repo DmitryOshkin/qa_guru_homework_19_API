@@ -31,7 +31,7 @@ public class TestBase {
         String remoteUrl = System.getProperty("remoteUrl"); //Получаем значение из параметров Jenkins
         String user = Credentials.config.user();
         String password = Credentials.config.password();
-        //Configuration.remote = format("https://%s:%s@%s", user, password, remoteUrl);
+        Configuration.remote = format("https://%s:%s@%s", user, password, remoteUrl);
 
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
